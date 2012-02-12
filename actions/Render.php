@@ -24,7 +24,7 @@ class Render extends CAction {
 		header('Cache-Control: max-age=0,no-cache,no-store,post-check=0,pre-check=0');
 		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');		
 
-        $id=$_GET['id'];
+        $id=isset($_GET['id'])?$_GET['id']:0;
 
         if ( $id==0 ) {
             $nodestoformat = CActiveRecord::model($this->getController()->classname)->roots()->findall();

@@ -83,22 +83,22 @@ class EBehavior extends CBehavior {
             $nodesarray=array();
             foreach( $models as $i => $node ) {
                 $nodesarray[$i]=array(
-                    'attributes'=>array(
-                    'id'=>$node->getAttribute($this->identity)
+                    'data'=>array(
+                        'id'=>$node->getAttribute($this->identity),
                     ),
-                    'data'=>$node->getAttribute($this->text),
+                    'title'=>$node->getAttribute($this->text),
                 );
-                if(!$node->isLeaf()) $nodesarray[$i]['state']="closed";
+                if(!$node->isLeaf()) $nodesarray[$i]['data']['jstree']['closed']=true;
             }
             return $nodesarray;
         }
         $jstreeformat=array(
-        'attributes'=>array(
-            'id'=>$models->getAttribute($this->identity)
-        ),
-            'data'=>$models->getAttribute($this->text),
+            'data'=>array(
+                'id'=>$models->getAttribute($this->identity),
+            ),
+            'title'=>$models->getAttribute($this->text),
         );
-        if(!$models->isLeaf()) $jstreeformat['state']="closed";
+        if(!$models->isLeaf()) $jstreeformat['data']['jstree']['closed']=true;
             return $jstreeformat;
     }
      /**

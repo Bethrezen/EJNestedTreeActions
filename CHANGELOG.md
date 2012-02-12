@@ -3,6 +3,12 @@ EJNestedTreeActions
 Version. *next*
 Author: [tydeas_dr](mailto:tydeas.dr@gmail.com)
 Author: [Alexander Makarov, Sam Dark](mailto:sam@rmcreative.ru)
+Author: [Alexander Kozhevnikov, Bethrezen](mailto:b37hr3z3n@gmail.com)
+
+Version *next+1*:
+-----------------
+* jsTree updated to version 1.0, EJNestedTreeActions updated (Bethrezen)
+* Added jsTree and CJsTree (Bethrezen)
 
 Version *next*:
 ---------------

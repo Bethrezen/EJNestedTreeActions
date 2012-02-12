@@ -1,8 +1,9 @@
-EJNestedTreeActions
+BEJNestedTreeActions
 ==================
 Version. *next*
 Author: [tydeas_dr](mailto:tydeas.dr@gmail.com)
 Author: [Alexander Makarov, Sam Dark](mailto:sam@rmcreative.ru)
+Author: [Alexander Kozhevnikov, Bethrezen)(mailto:b37hr3z3n@gmail.com)
 Copyright &copy; 2010 [Evresis](http://www.evresis.com)
 
 

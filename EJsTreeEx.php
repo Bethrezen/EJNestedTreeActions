@@ -82,15 +82,19 @@ class EJsTreeEx extends CJsTree {
 			$this->buttons['create_root']['ajaxurl'] = $this->getController()->createUrl('createroot');
 		}
 
-		$this->data = array(
-        	'type' => 'json',
+		$this->json = array(
+        	/*'type' => 'json',
         	'async'=> true,
         	'opts' => array(
             	'method'=>'GET',
             	'async'=>true,
 				'cache'=>false,
             	'url' => $this->getController()->createUrl('render'),
-        	),
+        	),*/
+        	'ajax' => array(
+        		'url' => $this->getController()->createUrl('render'),
+        		'data'=>"#DATA#",
+        	)
 		);    	
 
 		$request = Yii::app()->getRequest();
@@ -101,7 +105,7 @@ class EJsTreeEx extends CJsTree {
 		}
 
 		$this->callback = array(
-        	'beforedata'=>'js:function(NODE, TREE_OBJ) { return { id : $(NODE).attr("id") || 0 }; }', // 0 means its the first time to render the tree
+        	//'beforedata'=>'js:function(NODE, TREE_OBJ) { console.log(NODE);return { id : $(NODE).attr("id") || 0 }; }', // 0 means its the first time to render the tree
         	'onmove'=>'js:function(NODE, REF_NODE, TYPE, TREE_OBJ, RB){
             	var mv=false;
             	$.ajax({
